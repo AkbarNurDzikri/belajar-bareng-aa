@@ -7,7 +7,7 @@ export const Footer = () => {
         <img
           src="/belajar-bareng-aa-logo-full.png"
           alt="belajar-bareng-aa"
-          className="w-52 h-52 md:w-64 md:h-64"
+          className="w-64 h-52 md:w-64 md:h-64"
         />
         <p className="font-semibold text-slate-800 md:text-lg">
           Belajar lebih santai, lebih dekat, lebih paham

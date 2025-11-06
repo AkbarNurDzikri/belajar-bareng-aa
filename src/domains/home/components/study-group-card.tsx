@@ -1,15 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useModalStore } from "@/shared/store/modal-store";
-import { Calendar, SquarePen, Users } from "lucide-react";
+import { Calendar, LockKeyhole, SquarePen, Users } from "lucide-react";
 import { GroupSchedule } from "./group-schedule";
 import { stringTruncate } from "@/shared/utils/string-truncate";
 import { sendChat } from "../utils/send-chat";
+import { maskName } from "@/shared/utils/mask-name";
 
 interface Props {
   groupName: string;
   maxSlot: number;
-  registered: number;
+  registered: string[];
   schedules: { day: string; startTime: string; endTime: string }[];
 }
 
@@ -19,38 +20,40 @@ export const StudyGroupCard = ({
   registered,
   schedules,
 }: Props) => {
-  const sisaSlot = maxSlot - registered;
+  const totalStudents = registered.length;
+  const sisaSlot = maxSlot - totalStudents;
   const { openModal, closeAll } = useModalStore();
 
   return (
     <Card className="p-0 overflow-hidden min-w-4/12 flex shrink-0 my-5">
       <CardContent className="p-0">
-        <div className="p-5 flex items-center justify-between bg-violet-200">
+        <div className="px-5 py-1 flex items-center justify-between bg-violet-200">
           <div className="flex flex-col">
             <span className="font-semibold">
               Kelompok {stringTruncate(groupName, 8)}
             </span>
-            {registered}/{maxSlot} siswa
+            {totalStudents}/{maxSlot} siswa
           </div>
           <Users />
         </div>
 
-        <div className="p-5">
+        <div className="px-5 py-1">
           <p className="font-semibold">Anggota :</p>
+          <ol>
+            {registered.map((r, i) => (
+              <li key={i} className="list-decimal list-inside">
+                {maskName(r)}
+              </li>
+            ))}
+          </ol>
 
-          {registered === 0 && (
+          {totalStudents === 0 && (
             <p className="text-muted-foreground">Belum ada anggota</p>
           )}
 
-          {registered > 0 && sisaSlot > 0 && (
+          {totalStudents > 0 && sisaSlot > 0 && (
             <p className="text-green-700 font-bold animate-caret-blink">
               {sisaSlot} slot tersedia ✨
-            </p>
-          )}
-
-          {sisaSlot === 0 && (
-            <p className="text-pink-500 animate-pulse">
-              Maaf quota sudah penuh 🙏
             </p>
           )}
         </div>
@@ -86,11 +89,30 @@ export const StudyGroupCard = ({
           >
             <Calendar /> Lihat jadwal
           </Button>
+
           <Button
-            className="w-full bg-violet-700 hover:cursor-pointer hover:bg-violet-800"
-            onClick={() => window.open(sendChat(groupName), "_blank")}
+            className={`w-full ${
+              sisaSlot === 0 ? "bg-pink-700" : "bg-violet-700"
+            } hover:bg-violet-800 ${
+              sisaSlot === 0
+                ? "hover:cursor-not-allowed"
+                : "hover:cursor-pointer"
+            }`}
+            onClick={() =>
+              sisaSlot === 0
+                ? false
+                : window.open(sendChat(groupName), "_blank")
+            }
           >
-            <SquarePen /> Daftar kelompok ini
+            {sisaSlot === 0 ? (
+              <>
+                <LockKeyhole /> Quota sudah penuh
+              </>
+            ) : (
+              <>
+                <SquarePen /> Daftar di kelompok ini
+              </>
+            )}
           </Button>
         </div>
       </CardContent>

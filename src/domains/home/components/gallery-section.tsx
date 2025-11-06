@@ -4,9 +4,9 @@ import { GalleryCard } from "./gallery-card";
 
 export const GallerySection = () => {
   return (
-    <section className="px-5 bg-slate-100 pt-10">
+    <section className="px-5 bg-slate-100 pt-10" id="gallery">
       <div className="flex items-center justify-center gap-3">
-        <Clapperboard className="w-8 h-8" />
+        <Clapperboard className="w-8 h-8 text-violet-700" />
         <h2 className="text-xl md:text-3xl text-violet-700 font-bold text-center">
           Galeri Kegiatan
         </h2>

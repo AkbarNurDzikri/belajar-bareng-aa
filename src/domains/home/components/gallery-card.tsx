@@ -30,13 +30,13 @@ export const GalleryCard = ({ title, description, images }: Props) => {
                     key={i}
                     src={image}
                     alt={title}
-                    className={`w-full h-52 md:h-80 object-cover object-center rounded-lg`}
+                    className={`w-full h-60 md:h-80 object-cover object-center rounded-lg`}
                   />
                 </SwiperSlide>
               );
             })}
           </Swiper>
-          <p className="text-muted-foreground text-sm md:text-base text-justify">
+          <p className="text-muted-foreground text-sm md:text-base text-justify mt-3">
             {description}
           </p>
         </div>

@@ -2,7 +2,7 @@ export const dummyStudyGroup = [
   {
     groupName: "Pagi",
     maxSlot: 5,
-    registered: 2,
+    registered: ["Daniel", "Bilal"],
     schedules: [
       {
         day: "Senin",
@@ -34,7 +34,7 @@ export const dummyStudyGroup = [
   {
     groupName: "Siang A",
     maxSlot: 5,
-    registered: 2,
+    registered: ["Gio", "Khalid"],
     schedules: [
       {
         day: "Senin",
@@ -66,7 +66,7 @@ export const dummyStudyGroup = [
   {
     groupName: "Siang B",
     maxSlot: 5,
-    registered: 0,
+    registered: [],
     schedules: [
       {
         day: "Senin",

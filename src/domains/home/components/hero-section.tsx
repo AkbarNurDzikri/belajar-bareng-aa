@@ -3,7 +3,10 @@ import { sendChat } from "../utils/send-chat";
 
 export const HeroSection = () => {
   return (
-    <section className="px-5 py-10 bg-linear-to-bl from-blue-300 to-violet-500 mt-16 md:mt-20">
+    <section
+      className="px-5 py-10 bg-linear-to-bl from-blue-300 to-violet-700 mt-16 md:mt-20"
+      id="hero"
+    >
       <div className="flex items-center justify-center gap-3 animate-bounce">
         <div className="text-3xl md:text-5xl">🎓</div>
         <h1 className="text-slate text-2xl md:text-5xl font-bold text-slate-100">
@@ -20,11 +23,11 @@ export const HeroSection = () => {
         optimal ✨
       </h4>
       <Button
-        className="bg-yellow-500 mx-auto block mt-5 text-lg md:text-xl font-bold text-violet-700 md:w-1/2 hover:cursor-pointer hover:bg-yellow-600 hover:text-violet-900"
+        className="bg-yellow-500 mx-auto block mt-5 text-lg md:text-xl md:h-14 font-bold text-violet-700 md:w-1/2 hover:cursor-pointer hover:bg-yellow-600 hover:text-violet-900"
         size="lg"
         onClick={() => window.open(sendChat(), "_blank")}
       >
-        Daftar sekarang! 🚀
+        Daftar Gratis Sekarang! 🚀
       </Button>
     </section>
   );

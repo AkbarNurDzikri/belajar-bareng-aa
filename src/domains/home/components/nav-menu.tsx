@@ -8,6 +8,7 @@ interface Props {
 export const NavMenu = ({ showMenu }: Props) => {
   const menuItems = [
     { name: "Home", to: "hero" },
+    { name: "Kurikulum", to: "curriculum" },
     { name: "Kelompok Belajar", to: "study-group" },
     { name: "Galeri", to: "gallery" },
     { name: "FAQ", to: "faq" },
@@ -22,7 +23,7 @@ export const NavMenu = ({ showMenu }: Props) => {
         y: showMenu ? 0 : -10,
       }}
       transition={{ duration: 0.3 }}
-      className={`absolute top-16 md:top-20 left-0 w-full bg-gradient-to-br from-blue-300 to-violet-500 shadow-md rounded-b-xl overflow-hidden z-10 ${
+      className={`absolute top-16 md:top-20 left-0 w-full bg-gradient-to-br from-blue-300 to-violet-700 shadow-md rounded-b-xl overflow-hidden z-10 ${
         showMenu ? "max-h-96" : "max-h-0"
       }`}
     >
@@ -33,7 +34,7 @@ export const NavMenu = ({ showMenu }: Props) => {
               to={item.to}
               smooth={true}
               duration={500}
-              offset={-80} // biar gak ketutup header
+              offset={0} // biar gak ketutup header
               className="cursor-pointer hover:text-violet-800 transition-colors duration-200"
             >
               {item.name}

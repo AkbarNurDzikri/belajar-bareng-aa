@@ -9,7 +9,7 @@ import { dummyFaq } from "../constants/dummy-faq";
 
 export const Faq = () => {
   return (
-    <section className="p-5">
+    <section className="p-5 bg-slate-100" id="faq">
       <div className="flex items-center justify-center gap-3 mb-5">
         <BadgeQuestionMark className="w-8 h-8 text-pink-500" />
         <h2 className="text-xl md:text-3xl text-violet-700 font-bold text-center">

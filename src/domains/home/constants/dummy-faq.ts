@@ -1,6 +1,6 @@
 export const dummyFaq = [
   {
-    q: "Mulai usia berapa anak bisa ikut les di Belajar Bareng Aa?",
+    q: "Mulai usia berapa anak bisa ikut Belajar Bareng Aa?",
     a: "Kegiatan belajar bisa diikuti mulai usia 3 tahun, disesuaikan dengan kemampuan dan minat anak.",
   },
   {
@@ -37,6 +37,6 @@ export const dummyFaq = [
   },
   {
     q: "Bagaimana cara mendaftar les?",
-    a: `Cukup pilih kelompok belajar yang tersedia di halaman "Kelompok Belajar Kami", lalu klik tombol "Daftar Kelompok Ini", otomatis akan membuka aplikasi WhastApp dan langsung kirimkan chatnya. Atau bisa hubungi kami di kontak yang tertera pada halaman "Hubungi Kami".`,
+    a: `Pilih kelompok belajar di halaman "Kelompok Belajar Kami" dengan cara meng-klik tombol "Daftar di kelompok ini".`,
   },
 ];
