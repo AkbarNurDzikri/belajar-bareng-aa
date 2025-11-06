@@ -8,14 +8,24 @@ import { StudyGroupSection } from "./components/study-group-section";
 
 export const HomePage = () => {
   return (
-    <div className="">
+    <>
       <HeaderSection />
-      <HeroSection />
-      <StudyGroupSection />
-      <GallerySection />
-      <Faq />
-      <ContactUs />
+      <section id="hero">
+        <HeroSection />
+      </section>
+      <section id="study-group">
+        <StudyGroupSection />
+      </section>
+      <section id="gallery">
+        <GallerySection />
+      </section>
+      <section id="faq">
+        <Faq />
+      </section>
+      <section id="contact">
+        <ContactUs />
+      </section>
       <Footer />
-    </div>
+    </>
   );
 };

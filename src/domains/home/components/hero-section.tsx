@@ -3,7 +3,7 @@ import { sendChat } from "../utils/send-chat";
 
 export const HeroSection = () => {
   return (
-    <section className="px-5 py-10 bg-linear-to-bl from-blue-300 to-violet-500">
+    <section className="px-5 py-10 bg-linear-to-bl from-blue-300 to-violet-500 mt-16 md:mt-20">
       <div className="flex items-center justify-center gap-3 animate-bounce">
         <div className="text-3xl md:text-5xl">🎓</div>
         <h1 className="text-slate text-2xl md:text-5xl font-bold text-slate-100">
