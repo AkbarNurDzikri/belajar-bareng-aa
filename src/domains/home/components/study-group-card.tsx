@@ -10,7 +10,7 @@ import { maskName } from "@/shared/utils/mask-name";
 interface Props {
   groupName: string;
   maxSlot: number;
-  registered: string[];
+  registered: { name: string; age: number }[];
   schedules: { day: string; startTime: string; endTime: string }[];
 }
 
@@ -42,7 +42,7 @@ export const StudyGroupCard = ({
           <ol>
             {registered.map((r, i) => (
               <li key={i} className="list-decimal list-inside">
-                {maskName(r)}
+                {`${maskName(r.name)} (${r.age} tahun)`}
               </li>
             ))}
           </ol>
