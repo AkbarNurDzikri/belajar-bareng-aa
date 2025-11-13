@@ -7,7 +7,6 @@ export const dummyStudyGroup = [
       { name: "Bilal", age: 3 },
       { name: "Taqi", age: 3.6 },
       { name: "Haura", age: 2.6 },
-      { name: "Hamiz", age: 4.6 },
     ],
     schedules: [
       {

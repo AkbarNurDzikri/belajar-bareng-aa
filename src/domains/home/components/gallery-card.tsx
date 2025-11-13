@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, EffectCoverflow } from "swiper/modules";
 
 interface Props {
   title: string;
@@ -20,8 +20,18 @@ export const GalleryCard = ({ title, description, images }: Props) => {
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
-            modules={[Pagination]}
+            modules={[Pagination, EffectCoverflow]}
             pagination={{ clickable: true }}
+            effect="coverflow"
+            centeredSlides={true}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            grabCursor={true}
           >
             {images.map((image, i) => {
               return (
