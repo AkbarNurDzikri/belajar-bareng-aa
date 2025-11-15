@@ -5,6 +5,7 @@ export const dummyStudyGroup = [
     registered: [
       { name: "Daniel", age: 4.9 },
       { name: "Bilal", age: 3 },
+      { name: "Sean", age: 4.5 },
     ],
     schedules: [
       {
