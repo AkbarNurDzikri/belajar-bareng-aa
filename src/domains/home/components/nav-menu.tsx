@@ -27,7 +27,7 @@ export const NavMenu = ({ showMenu }: Props) => {
         showMenu ? "max-h-96" : "max-h-0"
       }`}
     >
-      <ul className="flex flex-col items-center gap-3 p-5 text-white font-medium">
+      <ul className="flex flex-col items-center gap-3 p-5 text-white font-medium md:text-2xl">
         {menuItems.map((item) => (
           <li key={item.to}>
             <Link

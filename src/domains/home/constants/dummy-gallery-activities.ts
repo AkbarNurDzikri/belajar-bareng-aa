@@ -25,7 +25,7 @@ export const dummyGalleryActivities = [
     title: "Menyambungkan garis membentuk pola 🔷",
     description:
       "Kegiatan ini melatih anak mengenal urutan (logika dan pola), melatih kemampuan visual-spasial, mengontrol gerakan halus saat menarik garis mengikuti pola.",
-    images: ["/activity1.jpg"],
+    images: ["/activity1.jpg", "/activity19.jpg"],
   },
   {
     title: "Menggambar dan mewarnai 🎨",
